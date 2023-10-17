@@ -4,11 +4,11 @@ const Navbar = () => {
   return (
     <div className="bg-black  h-14  sm:h-auto md:h-auto lg:h-auto text-white flex justify-evenly items-center">
       <div className="  flex justify-between  sm:pl  lg:px-2 lg:pl-[3rem]">
-        <h2 className="text-red-700 font-bold text-[26px] mt-1 sm:text-[1.5rem] md:text-[2rem] lg:pl-8 pl-1">
+        <h2 className="text-red-700 font-semibold text-[30px] mt-1 sm:text-[1.5rem] md:text-[2rem] lg:pl-8 pr-3">
           RedPill
         </h2>
         <div className="flex justify-between pl-1">
-          <button className="flex  items-center hover:text-blue-400 ease-in-out duration-300 justify-center rounded-lg text-[12px] mt-1 sm:text-[1.2rem] lg:text-[1.4rem]">
+          <button className="pr-2 flex  items-center hover:text-blue-400 ease-in-out duration-300 justify-center rounded-lg text-[12px] mt-1 sm:text-[1.2rem] lg:text-[1.4rem]">
             <CiLogin className="  text-xl font-bold sm:text-[1.8rem] sm:font-semibold md:text-[2rem]" />
             signin
           </button>
