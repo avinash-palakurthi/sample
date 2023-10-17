@@ -1,5 +1,7 @@
-import { CiLogin, CiSearch } from "react-icons/ci";
+import { CiLogin, CiSearch, CiLogout } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
+import { auth } from "../../firebase/setup";
 const Navbar = () => {
   return (
     <div className="bg-black  h-auto  sm:h-auto md:h-auto lg:h-auto text-white flex justify-evenly items-center  lg:shadow-md  lg:shadow-red-700 shadow-red-700 shadow-sm">
@@ -7,11 +9,20 @@ const Navbar = () => {
         <h2 className="text-red-700 font-semibold text-[30px] mt-1 sm:text-[1.5rem] md:text-[2rem] lg:pl-8 pr-3">
           RedPill
         </h2>
-        <div className="flex justify-between pl-1">
-          <button className="pr-2 flex  items-center hover:text-blue-400 ease-in-out duration-300 justify-center rounded-lg text-[12px] mt-1 sm:text-[1.2rem] lg:text-[1.4rem]">
-            <CiLogin className="  text-xl font-bold sm:text-[1.8rem] sm:font-semibold md:text-[2rem]" />
-            signin
-          </button>
+        <div className="flex justify-between items-center pl-1">
+          {auth.currentUser ? (
+            <button className="pr-2 flex  items-center hover:text-blue-400 ease-in-out duration-300 justify-center rounded-lg text-[12px] mt-1 sm:text-[1.2rem] lg:text-[1.4rem]">
+              <CiLogout className="  text-xl font-bold sm:text-[1.8rem] sm:font-semibold md:text-[2rem]" />
+              logout
+            </button>
+          ) : (
+            <Link to={"/signin"}>
+              <button className="pr-2 flex  items-center hover:text-blue-400 ease-in-out duration-300 justify-center rounded-lg text-[12px] mt-1 sm:text-[1.2rem] lg:text-[1.4rem]">
+                <CiLogin className="  text-xl font-bold sm:text-[1.8rem] sm:font-semibold md:text-[2rem]" />
+                signin
+              </button>
+            </Link>
+          )}
         </div>
       </div>
       <div className="lg:flex sm:flex md:flex pl-[18px] text-[8px] gap-2 sm:text-[14px] md:text-[14px] md:pl-6 flex-wrap lg:pl-[1rem]  lg:font-thin items-center hidden ">

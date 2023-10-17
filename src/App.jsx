@@ -1,11 +1,13 @@
-import Navbar from "./components/navbar/Navbar";
+import Main from "./components/main/Main";
 import Signin from "./components/signin/Signin";
-
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="">
-      {/* <Signin /> */}
-      <Navbar />
+      <Routes>
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 import { signInWithPopup } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { auth, googleProvider } from "../../firebase/setup";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
+  const navigate = useNavigate();
   const googleSignin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
+      auth.currentUser && navigate("/");
     } catch (error) {
       console.log(error);
     }
