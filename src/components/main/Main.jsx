@@ -1,9 +1,11 @@
+import Home from "../homes/Home";
 import Navbar from "../navbar/Navbar";
 
 const Main = () => {
   return (
-    <div>
+    <div className="   ">
       <Navbar />
+      <Home />
     </div>
   );
 };
