@@ -17,7 +17,7 @@ const Navbar = () => {
   // console.log("myname:", auth.currentUser.displayName);
 
   return (
-    <div className="bg-black w-auto h-auto  sm:h-auto md:h-auto lg:h-auto text-white flex justify-evenly items-center  shadow-sm border-b border-gray-700">
+    <div className="bg-black w-full flex-wrap h-auto sm:w-full md:w-full lg:w-full sm:h-auto md:h-auto lg:h-auto text-white flex justify-evenly items-center  shadow-sm border-b border-gray-700 fixed lg:fixed ">
       <div className="  flex justify-between  sm:pl  ">
         <h2 className="text-red-700 font-semibold text-[30px] mt-1 sm:text-[1.5rem] md:text-[2rem] lg:pl-8 pr-3">
           RedPill

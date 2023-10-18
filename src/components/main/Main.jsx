@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar";
 
 const Main = () => {
   return (
-    <div className="   ">
+    <div className=" flex flex-col">
       <Navbar />
       <Home />
     </div>

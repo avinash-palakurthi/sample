@@ -3,7 +3,7 @@ import Signin from "./components/signin/Signin";
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="">
+    <div className="bg-black">
       <Routes>
         <Route path="/signin" element={<Signin />} />
         <Route path="/" element={<Main />} />
